@@ -2,13 +2,10 @@
 
 int main(){
 
-     bool condicao = true;
-     bool condicao1 = false;
+     char letra = 'E';
 
-
-     std::cout<<condicao<<std::endl;
-     std::cout<<condicao1<<std::endl;
-
+     std::cout<<letra<<std::endl;
+     
 
 
      return 0;
