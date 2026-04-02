@@ -14,10 +14,11 @@ int main(){
      std::cin>>idade;
      std::cout<<(anoatual - idade)<<std::endl;
 
+     std::cout<<"Boa noite"<<std::endl;
      std::cout<<"Seu nome e: "<<nome<<std::endl;
      std::cout<<"Sua idade e: "<<idade<<std::endl;
      std::cout<<"Seu ano de nascimento e: "<<anoatual - idade<<std::endl;
-     
+
 
 
 
