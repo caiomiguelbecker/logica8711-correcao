@@ -3,12 +3,17 @@
 
 int main(){
 
-     std::string nome = "caio";
-     std::string sobrenome = "becker";
-     
-     std::cout<<nome + " " + sobrenome<<std::endl;
-     
-     
+
+std::string nome;
+std::string sobrenome = " becker";
+
+
+std::cout<<"digite sue nome: "<<std::endl;
+std::cin>>nome;
+
+std::cout<<nome.append(sobrenome);
+
+
 
 
      return 0;
