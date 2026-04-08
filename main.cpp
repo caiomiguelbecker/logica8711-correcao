@@ -8,8 +8,8 @@ int main(){
 
 
 
+   std::cout<<std::min(a,b)<<std::endl;
    std::cout<<std::max(a,b)<<std::endl;
-  
 
 
 
