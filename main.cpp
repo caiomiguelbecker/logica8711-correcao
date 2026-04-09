@@ -3,10 +3,15 @@
 
 int main(){
   
-  std::cout<<std::sqrt(64)<<std::endl;
-  std::cout<<std::round(2.6)<<std::endl;
-  std::cout<<std::log(2)<<std::endl;
+    int a = 5;
+    int b = 2;
 
+    if(a > b){
+        std::cout<<"A e maior que B."<<std::endl;
+    }
+    else{
+        std::cout<<"B e maior ou igual A."<<std::endl;
+    }
 
 
 
