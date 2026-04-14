@@ -3,39 +3,49 @@
 
 int main(){
 
-    int opcaoPagamento;
-    int qtdParafuso;
-    float valorParafuso = 1.40;
-    float valorTotalParafuso;
-    float desconto;
-    float juros;
+   std::string nome;
+   int idade;
+   float altura;
 
-    std::cout<<"Digite a quantidade de para fusos desejada: "<<std::endl;
-    std::cin>>qtdParafuso;
+    std::cout<<"\nBem vindo, a melhor a cademia de natacao do pais!! "<<std::endl;
+  
+    std::cout<<"Qual seu nome? "<<std::endl;
+    std::cin>>nome;
 
-    valorTotalParafuso = qtdParafuso * valorParafuso;
+    std::cout<<"Qual sua idade? "<<std::endl;
+    std::cin>>idade;
 
-    std::cout<<"qual forma de pagamento? "<<std::endl;
-    std::cout<<"--- 1 - pix"<<std::endl;
-    std::cout<<"--- 2 - dinheiro"<<std::endl;
-    std::cout<<"--- 3 - cartao"<<std::endl;
-    std::cin>>opcaoPagamento;
+    std::cout<<"Qual sua altura? "<<std::endl;
+    std::cin>>altura;
 
-    if(opcaoPagamento == 1){
-      std::cout<<"Sua comprar ficou no valor total de R$: "<<valorTotalParafuso<<std::endl;
+
+    if (idade < 0){
+      std::cout<<"Idade invalida"<<std::endl;
     }
-    else if(opcaoPagamento == 2){
-      desconto = valorTotalParafuso * 0.90;
-      std::cout<<"sua compra ficou no valor total de R$: "<<desconto<<std::endl;
+    else if (idade <= 10 ){
+      std::cout<<"\nola "<<nome<<std::endl;
+      std::cout<<"Voce esta na categoria infantil. "<<std::endl;
+      std::cout<<"Suas piscinas ficam no setor oeste, piscinas pequenas. "<<std::endl;
+      std::cout<<"Sua altura e: "<<altura<<" m. "<<std::endl;
     }
-    else if(opcaoPagamento == 3){
-      juros = valorTotalParafuso * 1.10;
-      std::cout<<"Sua compra ficou no valor total de R$: "<<juros<<std::endl;
+    else if(idade <= 18){
+      std::cout<<"\nola "<<nome<<std::endl;
+      std::cout<<"Voce esta na categoria juvenil. "<<std::endl;
+      std::cout<<"Suas piscinas ficam no setor norte, piscinas grandes. "<<std::endl;
+      std::cout<<"Sua altura e: "<<altura<< " m. "<<std::endl;
     }
-    else{ 
-      std::cout<<"Opcao de pagamento inexistente!!"<<std::endl;
+    else if (idade <= 60){
+      std::cout<<"\nola "<<nome<<std::endl;
+      std::cout<<"Voce esta na categoria da melhor idade. "<<std::endl;
+      std::cout<<"Suas piscinas ficam no setor leste, piscinas medias. "<<std::endl;
+      std::cout<<"Sua altura e: "<<altura<<" m."<<std::endl;
     }
+    
 
+     
+      
+      
+      
+    
     return 0;
 }
-
