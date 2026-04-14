@@ -34,7 +34,7 @@ int main(){
       std::cout<<"Suas piscinas ficam no setor norte, piscinas grandes. "<<std::endl;
       std::cout<<"Sua altura e: "<<altura<< " m. "<<std::endl;
     }
-    else if (idade <= 60){
+    else {idade <= 60;
       std::cout<<"\nola "<<nome<<std::endl;
       std::cout<<"Voce esta na categoria da melhor idade. "<<std::endl;
       std::cout<<"Suas piscinas ficam no setor leste, piscinas medias. "<<std::endl;
