@@ -1,14 +1,12 @@
 #include <iostream>
 
-int main(){
+int main()
+{
 
-    int soma = 0;
-
-    for(int i = 1; i <= 5; i++){
-        soma = soma +i;
+    int mynumbers[5] = {10, 20, 30, 40, 50};
+    for(int num : mynumbers){
+        std::cout<<num<<std::endl;   
     }
-
-    std::cout<<"Soma e: "<<soma<<std::endl;
 
 
   return 0;
