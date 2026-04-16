@@ -1,36 +1,15 @@
 #include <iostream>
 
-int main()
-{
+int main(){
 
-  int opcao;
+    int soma = 0;
 
-  std::cout << "Digite um valor para opcao: " << std::endl;
-  std::cin >> opcao;
+    for(int i = 1; i <= 5; i++){
+        soma = soma +i;
+    }
 
-  switch (opcao)
-  {
-  case 1:
-    std::cout << "domingo!" << std::endl;
-    break;
-  case 2:
-    std::cout << "Segunda-feira!" << std::endl;
-    break;
-  case 3:
-    std::cout << "Terca-feira!" << std::endl;
-    break;
-  case 4:
-    std::cout << "Quarta-feira!" << std::endl;
-    break;
-  case 5:
-    std::cout << "Quinta-feira!" << std::endl;
-    break;
-  case 6:
-    std::cout << "Sexta-feira!" << std::endl;
-    break;
-  default:
-    std::cout << "Numero invalido!!" << std::endl;
-  }
+    std::cout<<"Soma e: "<<soma<<std::endl;
+
 
   return 0;
 }
