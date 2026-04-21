@@ -2,14 +2,20 @@
 
 int main(){
 
-    int contagem = 10;
+   int num ;
 
-    while(contagem > 0){
-        std::cout<<contagem<<std::endl;
-        contagem--;
-    }
+  do{
 
-    std::cout<<"Feliz ano novo!!"<<std::endl;
+   std::cout<<"Digite um numero entre 0 e 10: "<<std::endl;
+   std::cin>>num;
+  
+   if(num < 1 || num > 10){
+      std::cout<<"Entrada invalida!!"<<std::endl;
+   }
 
+   }while(num < 1 || num > 10);{
+        std::cout<<"Obrigado!! Voce escolheu um numero: "<<num<<std::endl;
+   }
+  
   return 0;
 }
