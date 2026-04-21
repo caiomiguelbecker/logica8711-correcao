@@ -2,20 +2,16 @@
 
 int main(){
 
-   int num ;
+      int quantidade;
 
-  do{
+      do{
+         std::cout<<"Digite a quantidade em estoque (Deve ser maior que 0): "<<std::endl;
+         std::cin>>quantidade;
+      }
+      while(quantidade <= 0);
 
-   std::cout<<"Digite um numero entre 0 e 10: "<<std::endl;
-   std::cin>>num;
-  
-   if(num < 1 || num > 10){
-      std::cout<<"Entrada invalida!!"<<std::endl;
-   }
+         std::cout<<"Estoque atualizado: "<<quantidade<<" unidades."<<std::endl;
 
-   }while(num < 1 || num > 10);{
-        std::cout<<"Obrigado!! Voce escolheu um numero: "<<num<<std::endl;
-   }
-  
+
   return 0;
 }
