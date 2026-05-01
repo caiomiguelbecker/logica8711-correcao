@@ -5,19 +5,15 @@ int main(){
 
     int num;
 
-    std::cout<<"Digite um valor para num: "<<std::endl;
-    std::cin>>num;
+    int totalSeconds;
 
+    std::cout<<"Enter total seconds: "<<std::endl;
+    std::cin>>totalSeconds;
 
-    if(num % 2 == 0){
-        std::cout<<num<<"O numero digitado e par "<<std::endl;
+    int minutes = totalSeconds / 60;
+    int seconds = totalSeconds % 60;
 
-    }else{
-        std::cout<<num<<"O numero digitado e impar "<<std::endl;
-   
-    }
-
-
+    std::cout<<"Time: "<<minutes<<" minutes and "<<seconds<< " seconds."<<std::endl;
 
 
 
