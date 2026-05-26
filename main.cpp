@@ -103,7 +103,7 @@ do{
 
     }
 
-}while();
+}while;
  
    std::string opcao;   
     std::cout<< "Se você é seu próprio responsável digite? (s/n) "<<std::endl;
