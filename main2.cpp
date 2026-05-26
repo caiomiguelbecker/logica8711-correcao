@@ -34,7 +34,11 @@ void cadastro(){
     std::cout<<"Digite o cep: "<<std::endl;
     std::getline(std::cin, cepAluno);
 }
-
+void curso(){
+    std::cout<<"Para cursos presenciais digite 1. "<<std::endl;
+    std::cout<<"Para cusos EAD digite 2. "<<std::endl;
+    std::cout<<"Para idiomas digite 3. "<<std::endl;
+}
 
 
 
@@ -56,10 +60,27 @@ std::cout<<"Digite 0 para sair.\n "<<std::endl;
 std::cout<<"Escolha: ";
 std::cin >> menu;
    
-} while(menu = 0);
+} while(menu != 0);
 
 
-cadastro();
+switch(menu){
+
+   case 1:
+    cadastro();
+   break;
+   
+   case 2:
+    curso();
+   break;
+}
+
+
+
+
+
+
+
+
 
 
     return 0;

@@ -22,31 +22,7 @@ void exibirModalides(){
     std::cout<<"Digite 2 para ver o curso de idiomas "<<std::endl;
     std::cout<<"Digite 3 para se cadastrar! "<<std::endl;
    
-int modalidades;
-    std::cout<<"\nEscolha uma das opções a cima. "<<std::endl;
-    std::cin>>modalidades;
 
-    if(modalidades == 1){
-    
-        std::cout<<"Você está na área de cursos presenciais !! "<<std::endl;
-        std::cout<<"\n Digite 1 para mais informações do curso de TDS (tecnico em desenvolvimento de sistemas). "<<std::endl;
-        std::cout<<"Digite 2 para mais informações do curso de tecnico em modelagem. "<<std::endl;
-        std::cout<<"Digite 3 para mais informações do curso de tecnico em enfermagem. "<<std::endl;
-
-    }else if(modalidades == 2){
-        std::cout<<"Você está na área de cursos EAD !! "<<std::endl;
-        std::cout<<"\nDigite 1 para o curso de logística. "<<std::endl;
-        std::cout<<"Digite 2 para o curso de administrção. "<<std::endl;
-        std::cout<<"Digite 3 para curso de transações imoniliárias. "<<std::endl;
-        std::cout<<"Digite 4 para curso de segurança do trabalho. "<<std::endl;
-    }else {
-        std::cout<<"Você está na área de cursos FIC (cursos livres). "<<std::endl;
-        std::cout<<"\n Cursos FIC de moda: "<<std::endl;
-        std::cout<<"Digite 1 para curso de técnica de costura. "<<std::endl;
-        std::cout<<"Digite 2 para cirso de consultoria de estilo e coloração pessoal. "<<std::endl;
-        std::cout<<"Cursos FIC de informática: "<<std::endl;
-
-    }
 }
 void cursos(){
     std::cout<<"Para cursos presenciais digite 1. "<<std::endl;
@@ -100,34 +76,36 @@ int main(){
 
     exibirModalides();
 
-    // int modalidades;
-    // std::cout<<"\nEscolha uma das opções a cima. "<<std::endl;
-    // std::cin>>modalidades;
+    int modalidades;
+    std::cout<<"\nEscolha uma das opções a cima. "<<std::endl;
+    std::cin>>modalidades;
 
-    // if(modalidades == 1){
+do{
+    if(modalidades == 1){
     
-    //     std::cout<<"Você está na área de cursos presenciais !! "<<std::endl;
-    //     std::cout<<"\n Digite 1 para mais informações do curso de TDS (tecnico em desenvolvimento de sistemas). "<<std::endl;
-    //     std::cout<<"Digite 2 para mais informações do curso de tecnico em modelagem. "<<std::endl;
-    //     std::cout<<"Digite 3 para mais informações do curso de tecnico em enfermagem. "<<std::endl;
+        std::cout<<"Você está na área de cursos presenciais !! "<<std::endl;
+        std::cout<<"\n Digite 1 para mais informações do curso de TDS (tecnico em desenvolvimento de sistemas). "<<std::endl;
+        std::cout<<"Digite 2 para mais informações do curso de tecnico em modelagem. "<<std::endl;
+        std::cout<<"Digite 3 para mais informações do curso de tecnico em enfermagem. "<<std::endl;
 
-    // }else if(modalidades == 2){
-    //     std::cout<<"Você está na área de cursos EAD !! "<<std::endl;
-    //     std::cout<<"\nDigite 1 para o curso de logística. "<<std::endl;
-    //     std::cout<<"Digite 2 para o curso de administrção. "<<std::endl;
-    //     std::cout<<"Digite 3 para curso de transações imoniliárias. "<<std::endl;
-    //     std::cout<<"Digite 4 para curso de segurança do trabalho. "<<std::endl;
-    // }else {
-    //     std::cout<<"Você está na área de cursos FIC (cursos livres). "<<std::endl;
-    //     std::cout<<"\n Cursos FIC de moda: "<<std::endl;
-    //     std::cout<<"Digite 1 para curso de técnica de costura. "<<std::endl;
-    //     std::cout<<"Digite 2 para cirso de consultoria de estilo e coloração pessoal. "<<std::endl;
-    //     std::cout<<"Cursos FIC de informática: "<<std::endl;
+    }else if(modalidades == 2){
+        std::cout<<"Você está na área de cursos EAD !! "<<std::endl;
+        std::cout<<"\nDigite 1 para o curso de logística. "<<std::endl;
+        std::cout<<"Digite 2 para o curso de administrção. "<<std::endl;
+        std::cout<<"Digite 3 para curso de transações imoniliárias. "<<std::endl;
+        std::cout<<"Digite 4 para curso de segurança do trabalho. "<<std::endl;
+    }else {
+        std::cout<<"Você está na área de cursos FIC (cursos livres). "<<std::endl;
+        std::cout<<"\n Cursos FIC de moda: "<<std::endl;
+        std::cout<<"Digite 1 para curso de técnica de costura. "<<std::endl;
+        std::cout<<"Digite 2 para cirso de consultoria de estilo e coloração pessoal. "<<std::endl;
+        std::cout<<"Cursos FIC de informática: "<<std::endl;
 
-    // }
+    }
 
-    cadastroAluno();
-    std::string opcao;   
+}while();
+ 
+   std::string opcao;   
     std::cout<< "Se você é seu próprio responsável digite? (s/n) "<<std::endl;
     std::getline(std::cin, opcao);
 
@@ -137,7 +115,6 @@ int main(){
         cadastroResponsavelFinaceiro();
         std::cout<<"\nCadastro finalizado!! "<<std::endl;
     }
-
     
 
      return 0;
