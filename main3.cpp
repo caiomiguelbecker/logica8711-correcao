@@ -1,25 +1,21 @@
 #include<iostream>
 
-    int quadrado(int n){
-        return n * n ;
-    }
+void imprimirAteN(int n){
+    for(int i = 1; i <= n; i++)
+        std::cout<<i<<" ";
 
-    int cubo (int q){
-        return q * q * q ; 
-    }
-
-
+}
 
 int main(){
 
-    std::cout<<"Quadrado de 5: "<<quadrado(5)<<std::endl;
-    std::cout<<"Quadrado de 8: "<<quadrado(8)<<std::endl;
-    std::cout<<"Quadrado de 10: "<<quadrado(10)<<std::endl;
+    int numero;
+
+    std::cout<<"Fale um numero: "<<std::endl;
+    std::cin>>numero;
 
 
-    std::cout<<"\nCubo de 5: "<<cubo(5)<<std::endl;
-    std::cout<<"Cubo de 8: "<<cubo(8)<<std::endl;
-    std::cout<<"Cubo de 10: "<<cubo(10)<<std::endl;
-
+    imprimirAteN(numero);
+   
+   
     return 0;
 }
