@@ -1,21 +1,18 @@
 #include<iostream>
 
-void imprimirAteN(int n){
-    for(int i = 1; i <= n; i++)
-        std::cout<<i<<" ";
-
-}
-
 int main(){
 
-    int numero;
+    int numeros[5];
+    int soma = 0;
 
-    std::cout<<"Fale um numero: "<<std::endl;
-    std::cin>>numero;
+    for(int i = 0; i <= 4; i++){
+        std::cout<<"Digite o numero: "<<(i + 1)<<": ";
+        std::cin>>numeros[i];
+        soma += numeros[i];
 
+    }
 
-    imprimirAteN(numero);
-   
-   
+    std::cout<<"Soma: "<<soma<<std::endl;
+
     return 0;
 }
