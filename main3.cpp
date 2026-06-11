@@ -1,11 +1,23 @@
 #include<iostream>
+#include<string>
+
+void torreDeHanoi(int n, std::string origem, std::string destino, std::string auxiliar){
+    if(n == 1){
+        std::cout << "mover disco "<<origem<<" para "<<destino<<std::endl;
+        return;
+    }
+    torreDeHanoi(n - 1, origem, auxiliar, destino);
+    std::cout<<"mover disco "<<n<<" de "<<origem<<" para "<<destino<<std::endl;
+    torreDeHanoi(n - 1, auxiliar, destino, origem);
+}
 
 int main(){
+    int numDiscos;
+    std::cout<<"Quantos discos? "<<std::endl;
+    std::cin>>numDiscos;
 
-    int idade = 38;
+    std::cout<<"\nSequência de movimentos: "<<std::endl;
+    torreDeHanoi(numDiscos, "A", "C", "B");
 
-    std::string resultado = (idade >= 18) ? "maior de idade!" : "menor de idade!";
-
-    std::cout<<resultado<<std::endl;
-    
+    std::cout<<"\nTotal de movimentos: "<<(1 << numDiscos) - 1<<std::endl;
 }
