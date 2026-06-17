@@ -1,33 +1,35 @@
 #include<iostream>
 #include<string>
 
-struct Aposta{
-    std::string time;
-    int valor;
-    int odd;
-};
 
 int main(){
-    std::cout<<"===== CALCULADORA DE APOSTAS ====="<<std::endl;
+    std::string time1, time2;
+    int gols1, gols2;
+ 
+    std::cout<<"===== COMPARADOR DE PLACAR ====="<<std::endl;
+    std::cout<<std::endl;
+ 
+    std::cout<<"Time 1: ";
+    std::cin>>time1;
+    std::cout<<"Gols time 1: ";
+    std::cin>>gols1;
+ 
+    std::cout<<"Time 2: ";
+    std::cin>>time2;
+    std::cout<<"Gols time 2: ";
+    std::cin>>gols2;
+ 
+    std::cout<<"\n===== RESULTADO ====="<<std::endl;
+    std::cout<<time1<<" "<<gols1<<" x "<<gols2<<" "<<time2<<std::endl;
     std::cout<<std::endl;
 
-    Aposta aposta;
-
-    std::cout<<"Time: ";
-    std::cin>>aposta.time;
-
-    std::cout<<"Valor da aposta (R$): ";
-    std::cin>>aposta.valor;
-
-    std::cout<<"odd (multiplicador): ";
-    std::cin>>aposta.odd;
-
-    int ganho = aposta.valor * aposta.odd;
-    int lucro = ganho - aposta.valor;
-
-    std::cout<<std::endl;
-    std::cout<<"===== RESULTADO ====="<<std::endl;
-    std::cout<<"Você apostou R$ "<<aposta.valor<<" em "<<aposta.time<<std::endl;
-    std::cout<<"Se acertar, você ganha: R$ "<<ganho<<std::endl;
-    std::cout<<"Lucro: R$ "<<lucro<<std::endl;
-}
+    if(gols1 > gols2){
+        std::cout<<"O time "<<time1<<" venceu!"<<std::endl;
+    }else if(gols1 = gols2){
+        std::cout<<"O jogo terminou em empate."<<std::endl;
+    }else{
+        std::cout<<"O time "<<time2<<" venceu!"<<std::endl;
+    }
+    return 0;
+} 
+ 
