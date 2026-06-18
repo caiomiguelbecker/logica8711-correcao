@@ -1,26 +1,39 @@
 #include<iostream>
 #include<string>
 
-struct CampeonatosCopa{
-    int ano;
-    std::string campeao;
+struct jogador{
+    std::string nome;
+    int cartaoAmarelo;
+    int cartaoVermelho;
 };
 
 int main(){
-    CampeonatosCopa copa[6] = {
-        {2022, "Argentina"},
-        {2018, "França"},
-        {2014, "Alemanha"},
-        {2010, "Espanha"},
-        {2006, "Itália"},
-        {2002, "brasil"}
-    };
 
-    std::cout<<"======= Campeões da Copa ======="<<std::endl;
+    std::cout<<"===== REGISTRO DE CARTÕES ====="<<std::endl;
+
+    jogador Jogador;
+
+    std::cout<<"Nome jogador: "<<std::endl;
+    std::cin>>Jogador.nome;
+
+    std::cout<<"Cartões amarelos: "<<std::endl;
+    std::cin>>Jogador.cartaoAmarelo;
+
+    std::cout<<"Cartões vermelhos: "<<std::endl;
+    std::cin>>Jogador.cartaoVermelho;
+
     std::cout<<std::endl;
+    std::cout<<"===== SITUAÇÃO ====="<<std::endl;
 
-    for(int i = 0; i < 6; i++){
-        std::cout<<copa[i].ano<<" - Campeão: "<<copa[i].campeao<<std::endl;
+    if(Jogador.cartaoVermelho > 0){
+        std::cout<<Jogador.nome<<" foi expluso!"<<std::endl;
+    }else if(Jogador.cartaoAmarelo >= 2){
+        std::cout<<Jogador.cartaoAmarelo<<" recebeu 2 amarelos e foi expulso!"<<std::endl;
+    }else if(Jogador.cartaoAmarelo == 1){
+        std::cout<<Jogador.nome<<" recebeu 1 amarelo. Cuidado!"<<std::endl;
+    }else{
+        std::cout<<Jogador.nome<<" está limpo!"<<std::endl;
     }
     return 0;
 }
+
