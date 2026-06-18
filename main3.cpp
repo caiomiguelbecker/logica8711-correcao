@@ -1,35 +1,26 @@
 #include<iostream>
 #include<string>
 
+struct CampeonatosCopa{
+    int ano;
+    std::string campeao;
+};
 
 int main(){
-    std::string time1, time2;
-    int gols1, gols2;
- 
-    std::cout<<"===== COMPARADOR DE PLACAR ====="<<std::endl;
-    std::cout<<std::endl;
- 
-    std::cout<<"Time 1: ";
-    std::cin>>time1;
-    std::cout<<"Gols time 1: ";
-    std::cin>>gols1;
- 
-    std::cout<<"Time 2: ";
-    std::cin>>time2;
-    std::cout<<"Gols time 2: ";
-    std::cin>>gols2;
- 
-    std::cout<<"\n===== RESULTADO ====="<<std::endl;
-    std::cout<<time1<<" "<<gols1<<" x "<<gols2<<" "<<time2<<std::endl;
+    CampeonatosCopa copa[6] = {
+        {2022, "Argentina"},
+        {2018, "França"},
+        {2014, "Alemanha"},
+        {2010, "Espanha"},
+        {2006, "Itália"},
+        {2002, "brasil"}
+    };
+
+    std::cout<<"======= Campeões da Copa ======="<<std::endl;
     std::cout<<std::endl;
 
-    if(gols1 > gols2){
-        std::cout<<"O time "<<time1<<" venceu!"<<std::endl;
-    }else if(gols1 = gols2){
-        std::cout<<"O jogo terminou em empate."<<std::endl;
-    }else{
-        std::cout<<"O time "<<time2<<" venceu!"<<std::endl;
+    for(int i = 0; i < 6; i++){
+        std::cout<<copa[i].ano<<" - Campeão: "<<copa[i].campeao<<std::endl;
     }
     return 0;
-} 
- 
+}
