@@ -2,64 +2,29 @@
 
 int main(){
 
-    int fila[10];
-    int inicio = 0;
-    int fim = 0;
-    int opcao;
+int numeros[] = {1,2,3,4,5,6};
+int tamanho =8;
 
-    std::cout<<"===== PLHA COM MENU ====="<<std::endl;
+std::cout<<"===== NÚMEROS DUPLICADOS ====="<<std::endl;
+std::cout<<std::endl;
 
-    while(true){
-        std::cout<<"1 - Enfileirar"<<std::endl;
-        std::cout<<"2 - Desenfilheirar"<<std::endl;
-        std::cout<<"3 - Exibir fila"<<std::endl;
-        std::cout<<"4 - Sair"<<std::endl;
-        std::cout<<"Escolha: ";
-        std::cin>>opcao;
+std::cout<<"Array: ";
+for(int i = 0; i < tamanho; i++){
+    std::cout<<numeros[i]<<" ";
+}
+std::cout<<std::endl;
 
-        if(opcao == 1){
-            if(fim < 10){
-                int valor ;
-                std::cout<<"Digite o valor: ";
-                std::cin>>valor;
-                fila[fim] = valor;
-                fim++;
-                std::cout<<"Enfileirado!"<<std::endl;
-            }else{
-                std::cout<<"Fila cheia!"<<std::endl;
-            }
-        }
-        else if(opcao == 2){
-            if(inicio < fim){
-                std::cout<<"Removido: "<<std::endl;
-                inicio++;
-            }else{
-                std::cout<<"Fila vazia!"<<std::endl;
-            }
-        }
-        else if(opcao == 3){
-            if(inicio < fim){
-                std::cout<<"Fila: ";
-                for(int i = inicio; i < fim; i++){
-                    std::cout<<fila[i]<<" ";
-                }
-                std::cout<<std::endl;
-            }else{
-                std::cout<<"Fila vazia!"<<std::endl;
-            }
-        }
-        else if(opcao == 4){
-            std::cout<<"Saindo..."<<std::endl;
+std::cout<<"Números duplicados: "<<std::endl;
+for(int i = 0; i < tamanho; i++){
+    for(int j = i + 1; j < tamanho; j++){
+        if(numeros[i] == numeros[j]){
+            std::cout<<numeros[i]<<" aparece mais uma vez!"<<std::endl;
             break;
         }
-
-
-
-
-
-
-
     }
+}
+    
+
 
     return 0;
 }
