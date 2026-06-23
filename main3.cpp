@@ -2,54 +2,63 @@
 
 int main(){
 
-    int pilha[10];
-    int topo = -1;
+    int fila[10];
+    int inicio = 0;
+    int fim = 0;
     int opcao;
 
     std::cout<<"===== PLHA COM MENU ====="<<std::endl;
 
     while(true){
-        std::cout<<"1 - Empilhar"<<std::endl;
-        std::cout<<"2 - Desempilhar"<<std::endl;
-        std::cout<<"3 - Exibir pilha"<<std::endl;
+        std::cout<<"1 - Enfileirar"<<std::endl;
+        std::cout<<"2 - Desenfilheirar"<<std::endl;
+        std::cout<<"3 - Exibir fila"<<std::endl;
         std::cout<<"4 - Sair"<<std::endl;
+        std::cout<<"Escolha: ";
         std::cin>>opcao;
 
         if(opcao == 1){
-            if(topo < 9){
-                int valor;
+            if(fim < 10){
+                int valor ;
                 std::cout<<"Digite o valor: ";
                 std::cin>>valor;
-                topo ++;
-                pilha[topo];
-                std::cout<<"Empilhando"<<std::endl;
+                fila[fim] = valor;
+                fim++;
+                std::cout<<"Enfileirado!"<<std::endl;
             }else{
-                std::cout<<"Pilha cheia"<<std::endl;
+                std::cout<<"Fila cheia!"<<std::endl;
             }
         }
         else if(opcao == 2){
-            if(topo >= 0){
-                std::cout<<"Removido: "<<pilha[topo]<<std::endl;
-                topo--;
+            if(inicio < fim){
+                std::cout<<"Removido: "<<std::endl;
+                inicio++;
             }else{
-                std::cout<<"Pilha vazia!"<<std::endl;
+                std::cout<<"Fila vazia!"<<std::endl;
             }
         }
         else if(opcao == 3){
-            if(topo >= 0){
-                std::cout<<"Pilha: ";
-                for(int i = 0; i <= topo; i++){
-                    std::cout<<pilha[i]<<" ";
+            if(inicio < fim){
+                std::cout<<"Fila: ";
+                for(int i = inicio; i < fim; i++){
+                    std::cout<<fila[i]<<" ";
                 }
-                    std::cout<<std::endl;
-                }else{
-                    std::cout<<"Pilha vazia!"<<std::endl;
-                }
+                std::cout<<std::endl;
+            }else{
+                std::cout<<"Fila vazia!"<<std::endl;
             }
-            else if(opcao == 4){
-                std::cout<<"Saindo..."<<std::endl;
-                break;
-            }
+        }
+        else if(opcao == 4){
+            std::cout<<"Saindo..."<<std::endl;
+            break;
+        }
+
+
+
+
+
+
+
     }
 
     return 0;
