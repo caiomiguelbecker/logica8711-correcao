@@ -212,19 +212,19 @@ int main(){
 //     15. Contar positivos e negativos
 // Leia 10 números e conte quantos são positivos e quantos são negativos.
 
-    int numeros[10] = {10, -23, 30, -47, 50, -60, 70, -80, -95, -100};
-    int positivos = 0;
-    int negativos = 0;
+    // int numeros[10] = {10, -23, 30, -47, 50, -60, 70, -80, -95, -100};
+    // int positivos = 0;
+    // int negativos = 0;
 
-    for(int i =0; i < 10; i++){
-        if(numeros[i] > 0){
-            positivos += 1;
-        }else{
-            negativos += 1;
-        }
-    }
-    std::cout<<"A quantidade de números positivos é: "<<positivos<<std::endl;
-    std::cout<<"A quantidade de números negativos é: "<<negativos<<std::endl;
+    // for(int i =0; i < 10; i++){
+    //     if(numeros[i] > 0){
+    //         positivos += 1;
+    //     }else{
+    //         negativos += 1;
+    //     }
+    // }
+    // std::cout<<"A quantidade de números positivos é: "<<positivos<<std::endl;
+    // std::cout<<"A quantidade de números negativos é: "<<negativos<<std::endl;
 
 
 
