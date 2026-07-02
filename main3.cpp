@@ -3,32 +3,20 @@
 
 int main(){
 
-    std::vector<int>numeros;
+   std::vector<int>numeros;
 
-    std::cout<<"===== VECTOR (Arraylist em C++) ====="<<std::endl;
+   std::cout<<"===== 2. Tamanho do vector ====="<<std::endl;
+   std::cout<<std::endl;
 
-    numeros.push_back(10);
-    numeros.push_back(20);
-    numeros.push_back(30);
+   numeros.push_back(5);
+   numeros.push_back(10);
+   numeros.push_back(15);
 
-    std::cout<<"Números: ";
-    for(int i = 0; i < numeros.size(); i++){
-        std::cout<<numeros[i]<<" ";
-    }
-    std::cout<<std::endl;
-
-    std::cout<<"Tamanho: "<<numeros.size()<<std::endl;
-
-    int posicao;
-    std::cout<<"Digite uma posição: "<<std::endl;
-    std::cin>>posicao;
-    numeros.erase(numeros.begin() + posicao);
-    // numeros.pop_back();
-
-    std::cout<<"Após remover o último: ";
-    for(int i = 0; i = numeros.size(); i++){
-        std::cout<<numeros[i]<<" ";
-    }
+   std::cout<<"Tamanho do vector: "<<numeros.size()<<std::endl;
+   std::cout<<"Elementos: ";
+   for(int i = 0; i < numeros.size(); i++){
+    std::cout<<numeros[i]<<" ";
+   }
 
     return 0;
 }
