@@ -5,7 +5,7 @@ int main(){
  
     std::vector<int>numeros;
     
-    std::cout<<"Números pares e impares do Vector"<<std::endl;
+    std::cout<<"Inverter o Vector: "<<std::endl;
 
     numeros.push_back(5);
     numeros.push_back(10);
@@ -13,26 +13,16 @@ int main(){
     numeros.push_back(20);
     numeros.push_back(25);
 
-    std::cout<<"\nNúmeros do Vector: "<<std::endl;
-    
+    std::cout<<"Original: ";
     for(int i = 0; i < numeros.size(); i++){
-        std::cout<<numeros[i]<<", ";
+        std::cout<<numeros[i]<<" ";
     }
-    
-    std::cout<<"\n\nNúmeros pares do Vector: "<<std::endl;
-
-    for(int i = 0; i < numeros.size(); i++){
-        if(numeros[i] % 2 == 0){
-            std::cout<<numeros[i]<<", ";
-        }
+    std::cout<<std::endl;
+    std::cout<<"Invertido: ";
+    for(int i = numeros.size() -1; i >= 0; i--){
+        std::cout<<numeros[i]<<" ";
     }
-
-    std::cout<<"\n\nNúmeros ímpares: "<<std::endl;
-    for(int i = 0; i < numeros.size(); i++){
-        if(numeros[i] % 2 != 0){
-            std::cout<<numeros[i]<<", ";
-        }
-    }
+    std::cout<<std::endl;
 
 
     return 0;
